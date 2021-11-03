@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title   
+  p 
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let cup = [
+                    {
+                        "name": "Teacup",
+                        "color": "black" ,
+                        "cost": 1
+                    },
+                    {
+                        "name": "schooner",
+                        "color": "brown" ,
+                        "cost": 2
+                    },
+                    {
+                        "name": "tumbler",
+                        "color": "white" ,
+                        "cost": 1
+                    },                   
+                ]
+            each v,index in cup  
+                div(class="col-sm-2" ) #{v.name}
+                div(class="col-sm-2" ) #{v.color}
+                div(class="col-sm-2" ) #{v.cost}
+
+  
